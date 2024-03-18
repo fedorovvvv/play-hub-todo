@@ -28,8 +28,8 @@
 </script>
 
 <form class={`AddTask ${className}`}>
-	<Input placeholder={$t('add-task.input.placeholder')} bind:value={name} />
-	<Button on:click={handler.addClick}>{$t('add-task.button')}</Button>
+	<Input placeholder={$t('add-task.input.placeholder')} name="task-name" bind:value={name} />
+	<Button disabled={!name} on:click={handler.addClick}>{$t('add-task.button')}</Button>
 </form>
 
 <style lang="postcss">

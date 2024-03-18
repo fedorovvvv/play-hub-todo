@@ -3,6 +3,7 @@
 	import type { TaskListStore } from '$entities/task/model';
 	import { AddTask } from '$features/add-task';
 	import { CheckTaskCheckbox } from '$features/check-task';
+	import { LoadTasksFromApiButton } from '$features/load-tasks-from-api';
 	import { RemoveTaskButton } from '$features/remove-task';
 
 	interface $$Props {
@@ -20,14 +21,17 @@
 	<div class="TodoList__items">
 		{#each $taskListStore as task (task.id)}
 			<Task {task}>
-				<CheckTaskCheckbox bind:checked={task.checked} slot="checkbox" />
+				<CheckTaskCheckbox bind:completed={task.completed} slot="checkbox" />
 				<svelte:fragment slot="buttons">
 					<RemoveTaskButton taskId={task.id} store={taskListStore} />
 				</svelte:fragment>
 			</Task>
 		{/each}
 	</div>
-	<TaskListCount class="TodoList__count" store={taskListStore} />
+	<div class="TodoList__footer">
+		<LoadTasksFromApiButton store={taskListStore} variant="secondary" />
+		<TaskListCount store={taskListStore} />
+	</div>
 </div>
 
 <style lang="postcss">
@@ -42,9 +46,12 @@
 			margin-top: 16px;
 			width: 100%;
 		}
-		:global(&__count) {
-			margin-left: auto;
+		&__footer {
 			margin-top: 10px;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
 		}
 	}
 </style>

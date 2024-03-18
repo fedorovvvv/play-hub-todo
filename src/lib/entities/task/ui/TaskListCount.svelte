@@ -13,15 +13,15 @@
 
 	const tasks = derived(store, ($store) => ({
 		all: $store.length,
-		checked: $store.filter((task) => task.checked).length
+		completed: $store.filter((task) => task.completed).length
 	}));
 </script>
 
-<span class={`TaskListCount ${className}`}><small>{$tasks.checked}</small>/{$tasks.all}</span>
+<span class={`TaskListCount ${className}`}><small>{$tasks.completed}</small>/{$tasks.all}</span>
 
 <style lang="postcss">
 	.TaskListCount {
-		font-size: 16px;
+		font-size: 22px;
 		color: var(--color-secondary);
 		font-weight: 400;
 		letter-spacing: 0.1em;

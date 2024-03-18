@@ -10,7 +10,7 @@
 
 	let className = '';
 	export { className as class };
-	export let checked: $$Props['checked'] = false;
+	export let checked: $$Props['checked'] = undefined;
 	export let id = randomId();
 </script>
 

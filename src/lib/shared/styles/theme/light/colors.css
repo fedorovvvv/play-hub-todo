@@ -4,4 +4,5 @@
 	--color-active: #8a54e3;
 	--color-background: #f5f5f5;
 	--color-txt: var(--color-secondary);
+	--color-txt-secondary: var(--color-background);
 }

@@ -5,7 +5,7 @@
 </script>
 
 <header class="Header">
-	<h2>{$t('general.app-name')}</h2>
+	<h1 class="Header__title">{$t('general.app-name')}</h1>
 	<div class="Header__buttons">
 		<ChangeLocaleButton />
 		<ChangeThemeButton />
@@ -17,6 +17,9 @@
 		display: flex;
 		align-items: center;
 		padding: 10px 20px;
+		&__title {
+			font-size: 36px;
+		}
 		&__buttons {
 			display: flex;
 			align-items: center;

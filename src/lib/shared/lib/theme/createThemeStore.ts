@@ -2,7 +2,7 @@ import type { ThemeValues } from './types';
 import { DEFAULT_THEME_VALUE, LOCAL_STORAGE_THEME_KEY } from './config';
 import { persisted } from 'svelte-local-storage-store';
 
-export default (initialValue: ThemeValues) => {
+export const createThemeStore = (initialValue: ThemeValues) => {
 	const { set, subscribe, update } = persisted<{ current: ThemeValues }>(LOCAL_STORAGE_THEME_KEY, {
 		current: initialValue
 	});
@@ -36,3 +36,5 @@ export default (initialValue: ThemeValues) => {
 		toggle
 	};
 };
+
+export type ThemeStore = ReturnType<typeof createThemeStore>;

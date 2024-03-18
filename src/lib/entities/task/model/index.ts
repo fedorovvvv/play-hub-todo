@@ -5,7 +5,7 @@ import { writable } from 'svelte/store';
 export interface ITask {
 	id: string;
 	name: string;
-	checked?: boolean;
+	completed?: boolean;
 }
 
 export interface ICreateTaskListStoreOptions {
@@ -32,13 +32,13 @@ export const createTaskListStore = (
 
 	const clear = () => set([]);
 
-	const setChecked = (id: ITask['id'], state: ITask['checked']) => {
+	const setCompleted = (id: ITask['id'], completed: ITask['completed']) => {
 		update((data) => {
 			const index = data.findIndex((task) => task.id === id);
 
 			if (index === -1) return data;
 
-			data[index].checked = state;
+			data[index].completed = completed;
 
 			return data;
 		});
@@ -49,7 +49,7 @@ export const createTaskListStore = (
 		add,
 		remove,
 		clear,
-		setChecked,
+		setCompleted,
 		set
 	};
 };

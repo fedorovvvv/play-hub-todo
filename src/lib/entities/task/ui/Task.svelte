@@ -13,7 +13,7 @@
 
 <div class={`Task ${className}`}>
 	<slot name="checkbox" {task} />
-	<h3 class="Task__name" class:Task__name_through={task.checked}>{task.name}</h3>
+	<h3 class="Task__name" class:Task__name_through={task.completed}>{task.name}</h3>
 	{#if $$slots.buttons}
 		<div class="Task__buttons">
 			<slot name="buttons" {task} />

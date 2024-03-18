@@ -5,7 +5,7 @@
 	--button-txt-color: #ffffff;
 	/* -v-secondary */
 	--button-v-secondary-background-color: var(--color-secondary);
-	--button-v-secondary-txt-color: #ffffff;
+	--button-v-secondary-txt-color: var(--color-txt-secondary);
 	/* -v-active */
 	--button-v-active-background-color: var(--color-active);
 	--button-v-active-txt-color: #ffffff;
