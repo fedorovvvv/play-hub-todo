@@ -1,0 +1,11 @@
+{
+	"general": {
+		"app-name": "Todo"
+	},
+	"add-task": {
+		"input": {
+			"placeholder": "Task name"
+		},
+		"button": "Add Task"
+	}
+}

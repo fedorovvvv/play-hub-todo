@@ -1,0 +1,15 @@
+@import './colors.css';
+
+:root {
+	--button-background-color: var(--color-primary);
+	--button-border-color: var(--button-background-color);
+	--button-txt-color: #ffffff;
+	/* -v-secondary */
+	--button-v-secondary-background-color: var(--color-secondary);
+	--button-v-secondary-border-color: var(--button-v-secondary-background-color);
+	--button-v-secondary-txt-color: #ffffff;
+	/* -v-active */
+	--button-v-active-background-color: var(--color-active);
+	--button-v-active-border-color: var(--button-v-active-background-color);
+	--button-v-active-txt-color: #ffffff;
+}

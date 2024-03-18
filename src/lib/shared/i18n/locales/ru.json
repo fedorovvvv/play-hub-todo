@@ -1,0 +1,11 @@
+{
+	"general": {
+		"app-name": "Тудудушка"
+	},
+	"add-task": {
+		"input": {
+			"placeholder": "Название задачи"
+		},
+		"button": "Добавить задачу"
+	}
+}
