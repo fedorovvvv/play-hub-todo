@@ -2,12 +2,12 @@
 
 ## Запустить
 
-`npm install`
+`npm install`  
 `npm run dev`
 
 ## Тесты
 
-`npm run test:unit`
+`npm run test:unit`. 
 `npm run test:integration`
 
 ## Фичи
